@@ -11,12 +11,15 @@ interface Address {
 interface Person {
   firstName: string;
   lastName: string;
-  age: number;
-  address: Address;
+  readonly age: number;
+  readonly address: Address;
 }
 
 function updatePerson(person: Person) {
+  // @ts-expect-error: marked age as readonly
   person.age = 30;
+
+  // @ts-expect-error: marked age as readonly
   person.address = { street: "New Street", city: "New City" };
   console.log(person);
 }
@@ -27,7 +30,8 @@ function updatePerson(person: Person) {
 const personConst = {
   firstName: "John",
   lastName: "Doe",
-};
+} as const;
 
 // Try to mutate person.age and person.address.
+// @ts-expect-error: used `as const` to make the properties readonly
 personConst.firstName = "Jane"; // Error: Cannot assign to 'firstName' because it is a read-only property.

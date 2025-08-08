@@ -14,3 +14,19 @@ interface Employee {
   employeeId: number;
   department: string;
 }
+
+type Staff = Person & Employee;
+
+const supervisor: Staff = {
+  name: "Turtle",
+  age: 41,
+  employeeId: 42,
+  department: "operations",
+};
+
+type PartialStaff = Partial<Person> & Partial<Employee>;
+
+const manager: PartialStaff = {
+  name: "John Doe",
+  department: "teaching",
+};
