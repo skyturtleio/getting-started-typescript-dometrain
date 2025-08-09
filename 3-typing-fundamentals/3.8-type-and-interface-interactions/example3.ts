@@ -19,3 +19,16 @@ class SomePoint2 implements Point2 {
   x = 1;
   y = 2;
 }
+
+class Bear {
+  paws = 4;
+}
+
+interface Grizzly extends Bear {
+  size: "big" | "really big";
+}
+
+const grizzlyMember: Grizzly = {
+  paws: 4,
+  size: "big",
+};

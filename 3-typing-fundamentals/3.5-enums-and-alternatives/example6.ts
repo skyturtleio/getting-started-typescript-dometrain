@@ -9,4 +9,4 @@ function printColor(color: Color) {
   console.log(color);
 }
 
-printColor(Color.Red);
+printColor(Color.Blue);
