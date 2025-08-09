@@ -4,14 +4,14 @@
   "private": true,
   "devDependencies": {
     "@tsconfig/bun": "^1.0.8",
-    "@types/jquery": "^3.5.32",
-    "@types/node": "^24.1.0"
+    "@types/bun": "^1.2.19",
+    "@types/jquery": "^3.5.32"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
     "pluralize": "^8.0.0",
     "ts-brand": "^0.2.0",
     "type-testing": "^0.2.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   }
 }
