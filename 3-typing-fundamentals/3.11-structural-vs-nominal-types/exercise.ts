@@ -11,12 +11,20 @@ interface Person {
 
 interface Employee {
   name: string;
-  age: number;
+  // age: number;
   employeeId: number;
 }
 
 function logPersonName(person: Person): void {
   return console.log(person.name);
 }
+
+const someEmployee: Employee = {
+  name: "Jane Doe",
+  // age: 28,
+  employeeId: 42,
+};
+
+logPersonName(someEmployee);
 
 // Question 2: Comment out the age property on Employee. What happens?

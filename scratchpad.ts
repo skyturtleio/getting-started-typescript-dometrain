@@ -41,3 +41,17 @@ const partialCurrentUser: PartialMergedData = {
 const bmw = { model: "330", horsepower: 350, turbo: true };
 
 type CarLiteralType = keyof typeof bmw;
+// type LoginCounts = {[userName: string]: number};
+// const loginCounts: LoginCounts = {
+//   Amir: 5,
+//   Betty: 7,
+// };
+// loginCounts;
+type LoginCounts = {
+  [userName: string]: number;
+  Amir: number;
+};
+
+const logins: LoginCounts = {
+  Betty: 5,
+};
