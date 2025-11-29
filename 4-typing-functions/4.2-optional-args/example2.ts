@@ -8,4 +8,4 @@ function greet(name: string, greeting: string | undefined): string {
 }
 
 // Now this fails:
-// console.log(greet("Alice")); // Error: Expected 2 arguments, but got 1
+console.log(greet("Alice", undefined)); // Error: Expected 2 arguments, but got 1
